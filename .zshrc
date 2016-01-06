@@ -74,15 +74,20 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+export JAVA8_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA7_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
+HISTSIZE=130000 SAVEHIST=130000
+[ -s "/Users/aleesa/.scm_breeze/scm_breeze.sh" ] && source "/Users/aleesa/.scm_breeze/scm_breeze.sh"
+
+alias help='tail -20 ~/.zshrc'
 alias zshpls='vim ~/.zshrc'
 alias ohmyzsh='vim ~/.oh-my-zsh'
 alias gpr='git pull --rebase origin master'
@@ -90,5 +95,13 @@ alias gus='git reset --soft HEAD^ && git reset HEAD .'
 alias gac='git add -A . && git commit --amend --no-edit'
 alias grh='git reset HEAD'
 
-[ -s "/Users/kennethoxu/.scm_breeze/scm_breeze.sh" ] && source "/Users/kennethoxu/.scm_breeze/scm_breeze.sh"
-HISTSIZE=130000 SAVEHIST=130000
+alias v='vim'
+alias adf='fb-adb'
+alias dmc='~/othergit/dex-method-counts/dex-method-counts'
+
+alias geny="/Applications/Genymotion.app/Contents/MacOS/player --vm-name 117e7977-f41d-4581-a1d3-390ad8e1a969 > /dev/null &"
+
+alias weed='say -v Good News "Smoke weed every day" &'
+
+alias log='pidcat | grep -vE "PackageBroadcastService|Settings|Launcher.Model|Finsky|GmsNetworkLocationProvi|Icing|UpdateIcingCorporaServi|Backup|GCoreNlp|ResourcesManager|OpenGLRenderer|EGL_emulation|PhoneStatusBar|Atlas|DefContainer"'
+
