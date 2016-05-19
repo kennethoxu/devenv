@@ -18,7 +18,7 @@ set foldmethod=indent         " indent based folding
 set noerrorbells              " no bells in terminal
 set undolevels=1000           " number of undos stored
 set viminfo='50,"50           " '=marks for x files, "=registers for x file
-
+set expandtab ts=2 sw=2 ai
 
 syntax on
 highlight Comment  term=bold ctermfg=cyan guifg=cyan
